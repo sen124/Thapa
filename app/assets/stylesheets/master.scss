@@ -1,0 +1,31 @@
+$primary-font: 'Open Sans', sans-serif;  
+$secondary-font: 'Dosis', sans-serif;  
+html, body {
+  font-family: $primary-font;
+}
+html, body {
+  font-family: $primary-font;
+}
+
+.navbar-default .navbar-brand {
+  font-weight: 100; 
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #337ab7;
+}
+$main-blue: #337ab7;  
+navbar-default .navbar-brand {
+  font-weight: 100;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: $main-blue;
+}
+.navbar-brand{font-size:50px;}
+.shisir {background color:Red;
+        font:helvetica;
+        border: 1px solid black;
+        border-collapse: collapse
+        padding: 5px;
+        text-align: left;
+        font size:20px;
+}    
