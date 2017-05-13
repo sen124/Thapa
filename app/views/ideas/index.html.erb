@@ -1,7 +1,37 @@
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-  
+<!-- Button trigger modal -->
 
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Finance
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+     
+      
+        <%=simple_form_for(new_idea_path, html: { class: 'form-incline' }) do |t|%>
+        <div class="modal-body">
+          <%= t.input :date %>
+          <%= t.input :title %>
+          <%= t.input :amount %>
+        </div>
+      
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <%= t.submit 'Submit', class: 'btn btn-primary' %>
+        
+      </div>
+         <% end %>
+    </div>
+  </div>
+</div>
+</button>
 <h1></h1>
 <% @ideas.each do |model| %>
 <div class="panel panel-default">
@@ -21,34 +51,3 @@
   </div>
 <%end%>
 
-<!-- Button trigger modal -->
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="#myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"></h4>
-      </div>
-      <div>
-        <%=simple_form_for(new_idea_path, html: { class: 'form-inline' }) do |t|%>
-        <div class="modal-body">
-          <%= t.input :date %>
-          <%= t.input :title %>
-          <%= t.input :amount %>
-        </div>
-      </div>
-      
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= t.submit 'Submit', class: 'btn btn-primary' %>
-        
-      </div>
-      <% end %>
-    </div>
-  </div>
-</div>
